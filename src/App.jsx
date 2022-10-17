@@ -141,7 +141,8 @@ function App() {
             <FormLabel>
               Which framework would you like to use?
             </FormLabel>
-            <RadioGroup row>
+            <RadioGroup
+              row defaultValue='css' >
               <FormControlLabel
                 value='css'
                 control={<Radio />}
