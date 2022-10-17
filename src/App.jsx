@@ -170,20 +170,21 @@ function App() {
             </RadioGroup>
           </FormControl>
         </Grid>
+        <Stack direction='row'
+          spacing={5}
+          paddingTop={15}
+          paddingLeft={75}>
+          <Button variant='text'>Click Me</Button>
+          <Button variant='contained'>Submit</Button>
+          <Button color='myColor' variant='outlined'>Sign In</Button>
+          <Button disabled>Disabled</Button>
+          <Button variant='outlined'
+            startIcon={<DeleteIcon />}>Delete</Button>
+          <Button variant='outlined'
+            startIcon={<SendIcon />}>Send</Button>
+        </Stack>
       </Grid>
-      <Stack direction='row'
-        spacing={5}
-        paddingTop={15}
-        paddingLeft={75}>
-        <Button variant='text'>Click Me</Button>
-        <Button variant='contained'>Submit</Button>
-        <Button variant='outlined'>Sign In</Button>
-        <Button disabled>Disabled</Button>
-        <Button variant='outlined'
-          startIcon={<DeleteIcon />}>Delete</Button>
-        <Button variant='outlined'
-          startIcon={<SendIcon />}>Send</Button>
-      </Stack>
+
 
     </div >
   );
