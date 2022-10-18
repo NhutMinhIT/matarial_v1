@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
@@ -8,12 +8,17 @@ import Typography from '@mui/material/Typography'
 import DeleteIcon from '@mui/icons-material/Delete'
 import { Rating } from '@mui/material'
 
+import CustomerContext from '../Context/CustomerContext'
+
 export const CustomerCard = ({ customer }) => {
+    const { deleteCustomer } = useContext(CustomerContext)
     return (
         <Card>
             <CardHeader
                 action={
-                    <IconButton>
+                    <IconButton
+                        onClick={() => deleteCustomer(customer.id)}
+                    >
                         <DeleteIcon />
                     </IconButton>
                 }
@@ -30,6 +35,6 @@ export const CustomerCard = ({ customer }) => {
                     <Rating value={customer.rating} />
                 </Typography>
             </CardContent>
-        </Card>
+        </Card >
     )
 }

@@ -13,6 +13,7 @@ function App() {
                 </Routes>
             </BrowserRouter>
         </CustomerProvider>
+
     )
 }
 export default App;
