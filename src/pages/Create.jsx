@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-
+import React, { useContext, useState } from 'react';
 
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import TextField from '@mui/material/TextField'
+import ImageList from '@mui/material/ImageList';
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 import RadioGroup from '@mui/material/RadioGroup';
@@ -13,8 +13,11 @@ import Rating from '@mui/material/Rating'
 
 import SendIcon from '@mui/icons-material/Send'
 
+import CustomerContext from '../Context/CustomerContext';
+
 const Create = () => {
 
+    const { addCustomer } = useContext(CustomerContext)
     const [name, setName] = useState('');
     const [details, setDetails] = useState('');
     const [nameError, setNameError] = useState(false);
@@ -26,7 +29,8 @@ const Create = () => {
         event.preventDefault()
 
         if (name && details) {
-            console.log(name, details, gender, rating)
+            // console.log(name, details, gender, rating)
+            addCustomer({ name, details, gender, rating })
         }
         if (name == '') {
             setNameError(true)
@@ -93,6 +97,7 @@ const Create = () => {
                         onChange={(e) => setRating(~~e.target.value)}
                     >
                     </Rating>
+
                 </Box>
                 <Button
                     type='submit'

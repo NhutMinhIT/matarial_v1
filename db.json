@@ -1,24 +1,32 @@
 {
-    "customers": [{
-            "id": 1,
-            "name": "Nhut Minh",
-            "details": "He is a Front-End Developer",
-            "gender": "male",
-            "rating": 5
-        },
-        {
-            "id": 2,
-            "name": "Tien Phat",
-            "details": "He is a Back-End Developer",
-            "gender": "male",
-            "rating": 4
-        },
-        {
-            "id": 3,
-            "name": "Minh Tri",
-            "details": "He is a Front-End Developer",
-            "gender": "male",
-            "rating": 4
-        }
-    ]
+  "customers": [
+    {
+      "id": 1,
+      "name": "Nhut Minh",
+      "details": "He is a Front-End Developer",
+      "gender": "male",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "name": "Tien Phat",
+      "details": "He is a Back-End Developer",
+      "gender": "male",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "name": "Minh Tri",
+      "details": "He is a Front-End Developer",
+      "gender": "male",
+      "rating": 4
+    },
+    {
+      "name": "Nguyen Nhut Minh",
+      "details": "Full-Stack Developer ",
+      "gender": "male",
+      "rating": 4,
+      "id": 4
+    }
+  ]
 }
